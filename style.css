@@ -1,0 +1,407 @@
+/**
+ * Banner
+ */
+/* Main elem */
+.banner {
+    background: #fff;/*#808080;*/
+	box-shadow: 0 0 5px 0px #808080;/*0 0 1px 1px #ddd; 0 0 20px 5px #1e1e1e; */
+	height: 40px;
+    width: 100%;
+    color: #707070;/*#fff;*/
+	/*visibility: hidden;*/
+	/*position: fixed;*/
+	overflow: hidden;
+}
+.banner a {
+	color: #707070; /*#fff;*/
+}
+.banner a:hover {
+	color: #707070; /*#fff;*/
+}
+
+/* Nav */
+.nav {
+    height: 30px;
+    padding: 5px;
+    margin: 0px 0 0;
+}
+
+.nav__item--menu {
+    height: 30px;
+	line-height: 30px;
+	padding: 0;
+	font-size: 18px;
+	margin-left: 7px;
+	margin-right: 7px;
+	display: inline-block;
+	float: left;
+}
+/* Nav item */
+.nav__item {
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	font-size: 18px;
+	margin-left: 7px;
+	margin-right: 7px;
+	display: inline-block;
+    float: right;
+}
+/* Nav item button */
+.nav__item--btn {
+	display: inline-block;
+	padding: 0 10pxi;
+	font-size: 18px;
+	line-height: 38px;
+	padding: 0 20px;
+	width: auto;
+}
+
+/* disclaimer */
+div.disclaimer p {
+	color: a0a0a0;
+	font-style: italic;
+}
+
+/*hide-show*/
+/* Apply a pointer cursor and style the background upon hover to indicate <summary> is a clickable element. */
+/* These styles can be applied regardless of whether the fallback is needed */
+summary { cursor: pointer; color: #a2ac08; }
+
+/* The following styles are not really needed, since the jQuery script takes care of hiding/displaying the elements. */
+/* However, we’re still gonna use CSS as well to prevent FOUC in browsers that understand these selectors. */
+/* Remember: by default (and probably most of the time), the contents of the <details> element are hidden. */
+.no-details details > * { display: none; }
+/* This doesn’t work very well in Firefox 3.6.x */
+/* .no-details details[open] > * { display: block; } */
+/* The following doesn’t toggle correctly in WebKit:
+.no-details details > summary:before { content: '\25bc '; }
+.no-details details[open] > summary:before { content: '\25b2 '; }
+*/
+/* And yes, it should really be ::before, but that doesn’t work in IE8 */
+.no-details details > summary:before { float: left; padding-left: 5px; width: 15px; content: '\25bc '; }
+.no-details details.open > summary:before { content: '\25b2 '; }
+/* For IE6 and IE7, who don’t support generated content, you could use padding-left + a background image instead */
+/* I really couldn’t be bothered though. */
+/*
+.no-details details > summary { padding-left: 20px; background: url(/img/arrow-sprite.png) no-repeat 0 0; }
+.no-details details.open > summary { background-position: 0 -20px; }
+*/
+/* Make sure summary remains visible */
+.no-details details summary { display: block; }
+	
+/*================================================================================================= RESET */
+
+html, body, div, p, h1, h2, h3, h4, h5, h6, a, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/*================================================================================================= GENERAL */
+
+body {
+	font-family: courier,/*Arial, Helvetica,*/ sans-serif;
+	font-size: 13px;
+	color: #555;
+	background-color: #f0f0f0; /*#fff;*/
+	background-image: url("/img/back-gray.png");
+}
+
+div#page {
+	width: 880px; /*800px; */
+	margin: 20px auto;
+	padding: 10px;
+	-moz-border-radius: 3px; /* 11px; */
+	border-radius: 3px; /* 11px; */
+	-moz-box-shadow: 0 0 1px 1px #ddd; /* 0 0 20px 5px #1e1e1e; */
+	box-shadow: 0 0 1px 1px #ddd; /* 0 0 20px 5px #1e1e1e; */
+	background-color: #fff;
+}
+
+a {
+	color: #a2ac08;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #a2ac08;
+	text-decoration: underline;
+}
+
+/*================================================================================================= HEADER */
+
+div#header {
+	width: 840px; /* 760px; */
+ 	margin: 25px auto;
+	overflow: hidden;
+}
+
+div#headerLeft {
+	float: left;
+}
+
+img#photo {
+	float: right;
+	margin-left: 0px;
+	padding: 3px 3px 3px 0px;
+	border: 1px solid #bbb;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #f7f7f7;
+}
+
+p#headerRight {
+	float: left;
+	margin-left: 40px;
+	line-height: 19px;
+}
+
+h1 {
+	font-size: 36px;
+	color: #555; /*#333;*/
+}
+
+p#caption {
+	margin-top: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777;
+}
+
+/*================================================================================================= SECTION */
+
+div.section {
+	width: 840px; /* 760px; */
+	margin: 0 auto;
+	padding-top: 25px;
+	border-top: 1px solid #1e1e1e;
+	overflow: hidden;
+}
+
+div.section:last-child {
+	margin-bottom: 25px;
+	border-bottom: 1px solid #1e1e1e;
+}
+
+div.sectionLeft {
+	float: left;
+	width: 250px;
+}
+
+div.sectionRight {
+	float: left;
+	width: 590px; /* 510px; */
+}
+
+div.entry {
+	padding: 10px 0; /* 25px 0; */
+	border-top: 1px; /* 1px solid #1e1e1e; */
+}
+
+div.entry:first-child {
+	padding: 0 0 25px 0;
+	border: 0;
+}
+
+h2 {
+	font-size: 27px;
+}
+
+p {
+	line-height: 18px;
+}
+
+h5 {
+	float: right;
+	font-size: 16px;
+	color: #a2ac08;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+h4 {
+	margin-top: 3px;
+	font-size: 14px;
+	color: #888;
+}
+
+p.details {
+	margin-top: 20px;
+}
+
+/*================================================================================================= SOCIAL BAR */
+
+div#social {
+	position: fixed;
+	top: 35%;
+	left: 0;
+	padding: 10px 10px 10px 5px;
+	background-color: rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 0 11px 11px 0;
+	border-radius: 0 11px 11px 0;
+	font-size: 0px;
+}
+
+a.socialButton {
+	position: relative;
+	display: block;
+	margin-bottom: 5px;
+	text-decoration: none;
+}
+
+a.socialButton:last-child {
+	margin: 0;
+}
+
+a.socialButton span {
+	display: none;
+	padding: 10px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	font-size: 12px;
+}
+
+a.socialButton:hover span {
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 40px;
+}
+
+span#email {
+	min-width: 105px;
+}
+
+span#download {
+	min-width: 121px;
+}
+
+/*================================================================================================= PRINT */
+
+@media print
+{
+
+	body {
+		background: #fff;
+	}
+
+	div#page {
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		border: 1px solid #333;
+	}
+
+	img#photo {
+		padding: 6px;
+		border: 1px solid #333;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		background-color: transparent;
+	}
+
+	div#social {
+		display: none;
+	}
+
+}
+
+/*================================================================================================= DELETE THIS LINE
+
+div#page, img#photo, div#social {
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+a.socialButton span {
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+=================================================================================================== AND THIS LINE FOR SQUARE CORNERS */
+
+/*================================================================================================= DELETE THIS LINE
+
+body {
+	background-image: url("/img/back12.png");
+}
+
+a, p#caption, h5 {
+	color: #154582;
+}
+
+div.section, div.entry {
+	border-top: 1px solid #154582;
+}
+
+div.section:last-child {
+	border-bottom: 1px solid #154582;
+}
+
+=================================================================================================== AND THIS LINE FOR BLUE VERSION */
+
+/*================================================================================================= DELETE THIS LINE
+
+body {
+	background-image: url("/img/back13.png");
+}
+
+a, p#caption, h5 {
+	color: #b99a00;
+}
+
+div.section, div.entry {
+	border-top: 1px solid #b99a00;
+}
+
+div.section:last-child {
+	border-bottom: 1px solid #b99a00;
+}
+
+=================================================================================================== AND THIS LINE FOR YELLOW VERSION */
+
+/*================================================================================================= DELETE THIS LINE
+
+body {
+	background-image: url("/img/back14.png");
+}
+
+a, p#caption, h5 {
+	color: #c36309;
+}
+
+div.section, div.entry {
+	border-top: 1px solid #c36309;
+}
+
+div.section:last-child {
+	border-bottom: 1px solid #c36309;
+}
+
+=================================================================================================== AND THIS LINE FOR ORANGE VERSION*/
+
+/*================================================================================================= DELETE THIS LINE
+
+body {
+	background-image: url("/img/back15.png");
+}
+
+a, p#caption, h5 {
+	color: #730ab8;
+}
+
+div.section, div.entry {
+	border-top: 1px solid #730ab8;
+}
+
+div.section:last-child {
+	border-bottom: 1px solid #730ab8;
+}
+
+=================================================================================================== AND THIS LINE FOR PURPLE VERSION*/
