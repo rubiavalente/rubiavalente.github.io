@@ -147,7 +147,7 @@ html:not(.js) .themebtn { display: none; }
 .hero__fig { margin: 0; }
 .hero__fig img {
   width: 100%; height: auto; display: block;
-  border: 1px solid var(--rule); border-radius: 2px;
+  border: 1px solid var(--rule); border-radius: 14px;
   filter: saturate(.94);
 }
 @media (max-width: 780px) {
